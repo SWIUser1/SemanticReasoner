@@ -35,8 +35,11 @@ These contain the A-Box for the ontology model defined in GVA.owl.
 3) Install the dependencies using the following command
      
     ``` pip3 install -r requirements.txt ```
+    
+4) Unzip variants.zip 
 
-4) Run the python file using the following command
+
+5) Run the python file using the following command
 
     ``` python reasoningapi.py ```
     
