@@ -10,14 +10,12 @@ if __name__ == "__main__":
     time_dict = {}
     owlready2.reasoning.JAVA_MEMORY = 8000
 
-    # gva = get_ontology("file:///mnt/c/Users/gopis/Desktop/django/semrec/ontology/gva.nt").load()
-    # skos = get_ontology("http://www.w3.org/2004/02/skos/core#").load()
-
     for i in sorted(os.listdir('variants')):
-        gva = get_ontology("file:///home/swiadmin/GVA/ontology/gva.nt").load()
+
+        gva = get_ontology("file:///path to gva file").load() # After file:/// give full path to gva.nt. 
         skos = get_ontology("http://www.w3.org/2004/02/skos/core#").load()
         print("Currently Running {} file".format(i))
-        variant_ont = get_ontology("file:///home/swiadmin/SemanticReasoner/variants/{}".format(i)).load()
+        variant_ont = get_ontology("file:///path to variants file/variants/{}".format(i)).load() # After file:/// give full path to variants. 
 
         with gva :
             class UnknownPhenotype(gva.Variant): pass
@@ -82,12 +80,12 @@ if __name__ == "__main__":
         try:
 
             to = time.time()
+            # Pellet Reasoner
             sync_reasoner_pellet([variant_ont],infer_property_values = True, infer_data_property_values = True)
             time_dict[i] = time.time() - to
         except Exception:
             time_dict[i] = "Error"
-            print("Unexpected error:", sys.exc_info()[0])
-        print(time_dict[i])
+
         gva.destroy()
 
     # storing dictionary as csv
@@ -99,11 +97,12 @@ if __name__ == "__main__":
     # Initializing the Table
     Table = PrettyTable(["Filename", "No. of Variants", "Reasoning Time"])
 
+    # Populating table
     idx = 0
     for v,t in time_dict.items():
         Table.add_row([v,row_count[idx],t])
         idx += 1
 
-    #print Table
+    # Printing Table
     print(Table)
     
