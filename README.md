@@ -31,5 +31,15 @@ These contain the A-Box for the ontology model defined in GVA.owl.
 2) Create a virtual environment using the following comamnd
    
     ```python3 -m venv ./venv```
+ 
+3) Install the dependencies using the following command
+     
+    ``` pip3 install -r requirements.txt ```
+
+4) Run the python file using the following command
+
+    ``` python reasoningapi.py ```
+    
+
     
     
