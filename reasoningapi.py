@@ -13,7 +13,7 @@ if __name__ == "__main__":
     # gva = get_ontology("file:///mnt/c/Users/gopis/Desktop/django/semrec/ontology/gva.nt").load()
     # skos = get_ontology("http://www.w3.org/2004/02/skos/core#").load()
 
-    for i in os.listdir('variants'):
+    for i in sorted(os.listdir('variants')):
         gva = get_ontology("file:///home/swiadmin/GVA/ontology/gva.nt").load()
         skos = get_ontology("http://www.w3.org/2004/02/skos/core#").load()
         print("Currently Running {} file".format(i))

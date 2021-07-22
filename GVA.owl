@@ -1,0 +1,1906 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://semanticwebindia.in/GVA/ont/"
+     xml:base="http://semanticwebindia.in/GVA/ont/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:cito="http://purl.org/spar/cito/"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:void="http://rdfs.org/ns/void#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:gvaont="http://semanticwebindia.in/GVA/ont/"
+     xmlns:gvares="http://semanticwebindia.in/GVA/res/"
+     xmlns:schema="http://schema.org/"
+     xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+     xmlns:resource="http://semanticscience.org/resource/">
+    <owl:Ontology rdf:about="http://semanticwebindia.in/GVA/ont/">
+        <owl:versionIRI rdf:resource="http://semanticwebindia.in/GVA/ont/"/>
+        <owl:imports rdf:resource="http://semanticscience.org/ontology/sio/v1.43/sio-release.owl"/>
+        <owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/ont/hasAnnotationType -->
+
+    <owl:ObjectProperty rdf:about="http://semanticwebindia.in/GVA/ont/hasAnnotationType">
+        <rdfs:domain rdf:resource="http://semanticscience.org/resource/SIO_001050"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/ont/hasCategory -->
+
+    <owl:ObjectProperty rdf:about="http://semanticwebindia.in/GVA/ont/hasCategory">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://semanticwebindia.in/GVA/ont/Observation"/>
+                    <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#Concept"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/ont/hasDatasetType -->
+
+    <owl:ObjectProperty rdf:about="http://semanticwebindia.in/GVA/ont/hasDatasetType">
+        <rdfs:domain rdf:resource="http://semanticscience.org/resource/SIO_001050"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/ont/hasGene -->
+
+    <owl:ObjectProperty rdf:about="http://semanticwebindia.in/GVA/ont/hasGene">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment>The Gene URI from HGNC Vocabulary</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/ont/hasHPOTerms -->
+
+    <owl:ObjectProperty rdf:about="http://semanticwebindia.in/GVA/ont/hasHPOTerms">
+        <rdfs:domain rdf:resource="http://semanticscience.org/resource/SIO_000393"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/ont/hasIdentifiedGene -->
+
+    <owl:ObjectProperty rdf:about="http://semanticwebindia.in/GVA/ont/hasIdentifiedGene">
+        <rdfs:domain rdf:resource="http://semanticwebindia.in/GVA/ont/Case"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/ont/hasIdentifiedZygosity -->
+
+    <owl:ObjectProperty rdf:about="http://semanticwebindia.in/GVA/ont/hasIdentifiedZygosity">
+        <rdfs:domain rdf:resource="http://semanticwebindia.in/GVA/ont/Case"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/ont/hasOMIM -->
+
+    <owl:ObjectProperty rdf:about="http://semanticwebindia.in/GVA/ont/hasOMIM">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment>The OMIM ID (Phenotype Number) from the OMIM Vocabulary</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/ont/hasObservation -->
+
+    <owl:ObjectProperty rdf:about="http://semanticwebindia.in/GVA/ont/hasObservation">
+        <rdfs:domain rdf:resource="http://semanticwebindia.in/GVA/ont/Variant"/>
+        <rdfs:range rdf:resource="http://semanticwebindia.in/GVA/ont/Observation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/ont/hasPatient -->
+
+    <owl:ObjectProperty rdf:about="http://semanticwebindia.in/GVA/ont/hasPatient">
+        <rdfs:domain rdf:resource="http://semanticwebindia.in/GVA/ont/Case"/>
+        <rdfs:range rdf:resource="http://semanticscience.org/resource/SIO_000393"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/ont/hasPublishedVariant -->
+
+    <owl:ObjectProperty rdf:about="http://semanticwebindia.in/GVA/ont/hasPublishedVariant">
+        <rdfs:domain rdf:resource="http://semanticwebindia.in/GVA/ont/Case"/>
+        <rdfs:domain rdf:resource="http://semanticwebindia.in/GVA/ont/Variant"/>
+        <rdfs:range rdf:resource="http://semanticwebindia.in/GVA/ont/KnownVariant"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/ont/hasReference -->
+
+    <owl:ObjectProperty rdf:about="http://semanticwebindia.in/GVA/ont/hasReference">
+        <rdfs:domain rdf:resource="http://semanticwebindia.in/GVA/ont/KnownVariant"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/ont/hasSample -->
+
+    <owl:ObjectProperty rdf:about="http://semanticwebindia.in/GVA/ont/hasSample">
+        <rdfs:domain rdf:resource="http://semanticwebindia.in/GVA/ont/Case"/>
+        <rdfs:range rdf:resource="http://semanticscience.org/resource/SIO_001050"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/ont/hasSourceOrganization -->
+
+    <owl:ObjectProperty rdf:about="http://semanticwebindia.in/GVA/ont/hasSourceOrganization">
+        <rdfs:domain rdf:resource="http://semanticwebindia.in/GVA/ont/Case"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/ont/hasType -->
+
+    <owl:ObjectProperty rdf:about="http://semanticwebindia.in/GVA/ont/hasType">
+        <rdfs:domain rdf:resource="http://semanticwebindia.in/GVA/ont/KnownVariant"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/ont/hasUnit -->
+
+    <owl:ObjectProperty rdf:about="http://semanticwebindia.in/GVA/ont/hasUnit">
+        <rdfs:domain rdf:resource="http://semanticwebindia.in/GVA/ont/Observation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/ont/hasVariant -->
+
+    <owl:ObjectProperty rdf:about="http://semanticwebindia.in/GVA/ont/hasVariant">
+        <rdfs:domain rdf:resource="http://semanticscience.org/resource/SIO_001050"/>
+        <rdfs:range rdf:resource="http://semanticwebindia.in/GVA/ont/Variant"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/ont/hasVariantClassification -->
+
+    <owl:ObjectProperty rdf:about="http://semanticwebindia.in/GVA/ont/hasVariantClassification">
+        <rdfs:domain rdf:resource="http://semanticwebindia.in/GVA/ont/Case"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/ont/isAbout -->
+
+    <owl:ObjectProperty rdf:about="http://semanticwebindia.in/GVA/ont/isAbout">
+        <rdfs:domain rdf:resource="http://semanticwebindia.in/GVA/ont/Observation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/ont/isLinkedTo -->
+
+    <owl:ObjectProperty rdf:about="http://semanticwebindia.in/GVA/ont/isLinkedTo">
+        <rdfs:domain rdf:resource="http://semanticscience.org/resource/SIO_000393"/>
+        <rdfs:domain rdf:resource="http://semanticwebindia.in/GVA/ont/Case"/>
+        <rdfs:range rdf:resource="http://semanticscience.org/resource/SIO_000393"/>
+        <rdfs:range rdf:resource="http://semanticwebindia.in/GVA/ont/Case"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_000300 -->
+
+    <owl:DatatypeProperty rdf:about="http://semanticscience.org/resource/SIO_000300">
+        <rdfs:domain rdf:resource="http://semanticwebindia.in/GVA/ont/Observation"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+                    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+                    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+                </owl:unionOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/ont/hasAffectedFamily -->
+
+    <owl:DatatypeProperty rdf:about="http://semanticwebindia.in/GVA/ont/hasAffectedFamily">
+        <rdfs:domain rdf:resource="http://semanticscience.org/resource/SIO_000393"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/ont/hasAffectedFamilyMembers -->
+
+    <owl:DatatypeProperty rdf:about="http://semanticwebindia.in/GVA/ont/hasAffectedFamilyMembers">
+        <rdfs:domain rdf:resource="http://semanticscience.org/resource/SIO_000393"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/ont/hasAge -->
+
+    <owl:DatatypeProperty rdf:about="http://semanticwebindia.in/GVA/ont/hasAge">
+        <rdfs:domain rdf:resource="http://semanticscience.org/resource/SIO_000393"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/ont/hasAgeUnit -->
+
+    <owl:DatatypeProperty rdf:about="http://semanticwebindia.in/GVA/ont/hasAgeUnit">
+        <rdfs:domain rdf:resource="http://semanticscience.org/resource/SIO_000393"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/ont/hasClinicalFeatures -->
+
+    <owl:DatatypeProperty rdf:about="http://semanticwebindia.in/GVA/ont/hasClinicalFeatures">
+        <rdfs:domain rdf:resource="http://semanticscience.org/resource/SIO_000393"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/ont/hasConsanguinity -->
+
+    <owl:DatatypeProperty rdf:about="http://semanticwebindia.in/GVA/ont/hasConsanguinity">
+        <rdfs:domain rdf:resource="http://semanticscience.org/resource/SIO_000393"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/ont/hasDataset -->
+
+    <owl:DatatypeProperty rdf:about="http://semanticwebindia.in/GVA/ont/hasDataset">
+        <rdfs:domain rdf:resource="http://semanticscience.org/resource/SIO_001050"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/ont/hasGeneID -->
+
+    <owl:DatatypeProperty rdf:about="http://semanticwebindia.in/GVA/ont/hasGeneID">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>The Entez GeneID</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/ont/hasGeneSymbol -->
+
+    <owl:DatatypeProperty rdf:about="http://semanticwebindia.in/GVA/ont/hasGeneSymbol">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>The Gene Symbol as per HGNC convention</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/ont/hasIdentifiedVariant -->
+
+    <owl:DatatypeProperty rdf:about="http://semanticwebindia.in/GVA/ont/hasIdentifiedVariant">
+        <rdfs:domain rdf:resource="http://semanticwebindia.in/GVA/ont/Case"/>
+        <rdfs:domain rdf:resource="http://semanticwebindia.in/GVA/ont/Variant"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/ont/hasIdentifier -->
+
+    <owl:DatatypeProperty rdf:about="http://semanticwebindia.in/GVA/ont/hasIdentifier">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://semanticscience.org/resource/SIO_000393"/>
+                    <rdf:Description rdf:about="http://semanticscience.org/resource/SIO_001050"/>
+                    <rdf:Description rdf:about="http://semanticwebindia.in/GVA/ont/Case"/>
+                    <rdf:Description rdf:about="http://semanticwebindia.in/GVA/ont/KnownVariant"/>
+                    <rdf:Description rdf:about="http://semanticwebindia.in/GVA/ont/Observation"/>
+                    <rdf:Description rdf:about="http://semanticwebindia.in/GVA/ont/Variant"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/ont/hasLabel -->
+
+    <owl:DatatypeProperty rdf:about="http://semanticwebindia.in/GVA/ont/hasLabel">
+        <rdfs:domain rdf:resource="http://semanticwebindia.in/GVA/ont/Observation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/ont/hasNoveltyInfo -->
+
+    <owl:DatatypeProperty rdf:about="http://semanticwebindia.in/GVA/ont/hasNoveltyInfo">
+        <rdfs:domain rdf:resource="http://semanticwebindia.in/GVA/ont/Case"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/ont/hasRefGenome -->
+
+    <owl:DatatypeProperty rdf:about="http://semanticwebindia.in/GVA/ont/hasRefGenome">
+        <rdfs:domain rdf:resource="http://semanticscience.org/resource/SIO_001050"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/ont/hasSampleID -->
+
+    <owl:DatatypeProperty rdf:about="http://semanticwebindia.in/GVA/ont/hasSampleID">
+        <rdfs:domain rdf:resource="http://semanticscience.org/resource/SIO_001050"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/ont/hasScore -->
+
+    <owl:DatatypeProperty rdf:about="http://semanticwebindia.in/GVA/ont/hasScore">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://semanticwebindia.in/GVA/ont/Observation"/>
+                    <rdf:Description rdf:about="http://semanticwebindia.in/GVA/ont/Variant"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/ont/hasSeqPlatform -->
+
+    <owl:DatatypeProperty rdf:about="http://semanticwebindia.in/GVA/ont/hasSeqPlatform">
+        <rdfs:domain rdf:resource="http://semanticscience.org/resource/SIO_001050"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/ont/hasSex -->
+
+    <owl:DatatypeProperty rdf:about="http://semanticwebindia.in/GVA/ont/hasSex">
+        <rdfs:domain rdf:resource="http://semanticscience.org/resource/SIO_000393"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/ont/hasStatus -->
+
+    <owl:DatatypeProperty rdf:about="http://semanticwebindia.in/GVA/ont/hasStatus">
+        <rdfs:domain rdf:resource="http://semanticwebindia.in/GVA/ont/Variant"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/ont/isNovel -->
+
+    <owl:DatatypeProperty rdf:about="http://semanticwebindia.in/GVA/ont/isNovel">
+        <rdfs:domain rdf:resource="http://semanticwebindia.in/GVA/ont/Case"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_000000 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/SIO_000000"/>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_000004 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/SIO_000004"/>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_000393 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/SIO_000393"/>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_001050 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/SIO_001050"/>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/ont/Case -->
+
+    <owl:Class rdf:about="http://semanticwebindia.in/GVA/ont/Case">
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/SIO_000000"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/ont/KnownVariant -->
+
+    <owl:Class rdf:about="http://semanticwebindia.in/GVA/ont/KnownVariant">
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/SIO_000000"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/ont/Observation -->
+
+    <owl:Class rdf:about="http://semanticwebindia.in/GVA/ont/Observation">
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/SIO_000004"/>
+        <rdfs:comment xml:lang="en">The Observation Class stores the value for each observation of an Annovar Variant</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/ont/Variant -->
+
+    <owl:Class rdf:about="http://semanticwebindia.in/GVA/ont/Variant">
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/SIO_000000"/>
+        <rdfs:comment xml:lang="en">This class stores the Annovar Variant Information</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/res/Cat1 -->
+
+    <owl:NamedIndividual rdf:about="http://semanticwebindia.in/GVA/res/Cat1">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:altLabel>Whole Exome</skos:altLabel>
+        <skos:prefLabel>Whole Exome</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/res/Cat10 -->
+
+    <owl:NamedIndividual rdf:about="http://semanticwebindia.in/GVA/res/Cat10">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <hasCategory rdf:resource="http://semanticwebindia.in/GVA/res/Cat97"/>
+        <skos:broader rdf:resource="http://semanticwebindia.in/GVA/res/Cat1"/>
+        <skos:altLabel>OMIM_phenotype</skos:altLabel>
+        <skos:definition>show</skos:definition>
+        <skos:note>S</skos:note>
+        <skos:prefLabel>OMIM_phenotype</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/res/Cat100 -->
+
+    <owl:NamedIndividual rdf:about="http://semanticwebindia.in/GVA/res/Cat100">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:altLabel>Clinvar Details</skos:altLabel>
+        <skos:prefLabel>Clinvar Details</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/res/Cat101 -->
+
+    <owl:NamedIndividual rdf:about="http://semanticwebindia.in/GVA/res/Cat101">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:altLabel>Prediction Softwares</skos:altLabel>
+        <skos:prefLabel>Prediction Softwares</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/res/Cat102 -->
+
+    <owl:NamedIndividual rdf:about="http://semanticwebindia.in/GVA/res/Cat102">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:altLabel>Protein Domain</skos:altLabel>
+        <skos:prefLabel>Protein Domain</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/res/Cat103 -->
+
+    <owl:NamedIndividual rdf:about="http://semanticwebindia.in/GVA/res/Cat103">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:altLabel>Intervar Details</skos:altLabel>
+        <skos:prefLabel>Intervar Details</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/res/Cat104 -->
+
+    <owl:NamedIndividual rdf:about="http://semanticwebindia.in/GVA/res/Cat104">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:altLabel>Chromosome Details (Orig)</skos:altLabel>
+        <skos:prefLabel>Chromosome Details (Orig)</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/res/Cat105 -->
+
+    <owl:NamedIndividual rdf:about="http://semanticwebindia.in/GVA/res/Cat105">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:altLabel>Other Info</skos:altLabel>
+        <skos:prefLabel>Other Info</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/res/Cat106 -->
+
+    <owl:NamedIndividual rdf:about="http://semanticwebindia.in/GVA/res/Cat106">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:altLabel>CADD Details</skos:altLabel>
+        <skos:prefLabel>CADD Details</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/res/Cat11 -->
+
+    <owl:NamedIndividual rdf:about="http://semanticwebindia.in/GVA/res/Cat11">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <hasCategory rdf:resource="http://semanticwebindia.in/GVA/res/Cat97"/>
+        <skos:broader rdf:resource="http://semanticwebindia.in/GVA/res/Cat1"/>
+        <skos:altLabel>OMIM_genename</skos:altLabel>
+        <skos:definition>show</skos:definition>
+        <skos:note>S</skos:note>
+        <skos:prefLabel>OMIM_genename</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/res/Cat12 -->
+
+    <owl:NamedIndividual rdf:about="http://semanticwebindia.in/GVA/res/Cat12">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <hasCategory rdf:resource="http://semanticwebindia.in/GVA/res/Cat96"/>
+        <skos:broader rdf:resource="http://semanticwebindia.in/GVA/res/Cat1"/>
+        <skos:altLabel>GeneDetail.refGene</skos:altLabel>
+        <skos:note>N</skos:note>
+        <skos:prefLabel>GeneDetail.refGene</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/res/Cat13 -->
+
+    <owl:NamedIndividual rdf:about="http://semanticwebindia.in/GVA/res/Cat13">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <hasCategory rdf:resource="http://semanticwebindia.in/GVA/res/Cat96"/>
+        <skos:broader rdf:resource="http://semanticwebindia.in/GVA/res/Cat1"/>
+        <skos:altLabel>ExonicFunc.refGene</skos:altLabel>
+        <skos:definition>show</skos:definition>
+        <skos:note>S</skos:note>
+        <skos:prefLabel>ExonicFunc.refGene</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/res/Cat14 -->
+
+    <owl:NamedIndividual rdf:about="http://semanticwebindia.in/GVA/res/Cat14">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <hasCategory rdf:resource="http://semanticwebindia.in/GVA/res/Cat96"/>
+        <skos:broader rdf:resource="http://semanticwebindia.in/GVA/res/Cat1"/>
+        <skos:altLabel>AAChange.refGene</skos:altLabel>
+        <skos:definition>show</skos:definition>
+        <skos:note>S</skos:note>
+        <skos:prefLabel>AAChange.refGene</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/res/Cat15 -->
+
+    <owl:NamedIndividual rdf:about="http://semanticwebindia.in/GVA/res/Cat15">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <hasCategory rdf:resource="http://semanticwebindia.in/GVA/res/Cat96"/>
+        <skos:broader rdf:resource="http://semanticwebindia.in/GVA/res/Cat1"/>
+        <skos:altLabel>phastConsElements46way</skos:altLabel>
+        <skos:note>N</skos:note>
+        <skos:prefLabel>phastConsElements46way</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/res/Cat16 -->
+
+    <owl:NamedIndividual rdf:about="http://semanticwebindia.in/GVA/res/Cat16">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <hasCategory rdf:resource="http://semanticwebindia.in/GVA/res/Cat96"/>
+        <skos:broader rdf:resource="http://semanticwebindia.in/GVA/res/Cat1"/>
+        <skos:altLabel>genomicSuperDups</skos:altLabel>
+        <skos:note>N</skos:note>
+        <skos:prefLabel>genomicSuperDups</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/res/Cat17 -->
+
+    <owl:NamedIndividual rdf:about="http://semanticwebindia.in/GVA/res/Cat17">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <hasCategory rdf:resource="http://semanticwebindia.in/GVA/res/Cat98"/>
+        <skos:broader rdf:resource="http://semanticwebindia.in/GVA/res/Cat1"/>
+        <skos:altLabel>1000g2015aug_all</skos:altLabel>
+        <skos:definition>show</skos:definition>
+        <skos:note>S</skos:note>
+        <skos:prefLabel>1000g2015aug_all</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/res/Cat18 -->
+
+    <owl:NamedIndividual rdf:about="http://semanticwebindia.in/GVA/res/Cat18">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <hasCategory rdf:resource="http://semanticwebindia.in/GVA/res/Cat98"/>
+        <skos:broader rdf:resource="http://semanticwebindia.in/GVA/res/Cat1"/>
+        <skos:altLabel>esp6500siv2_all</skos:altLabel>
+        <skos:definition>show</skos:definition>
+        <skos:note>S</skos:note>
+        <skos:prefLabel>esp6500siv2_all</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/res/Cat19 -->
+
+    <owl:NamedIndividual rdf:about="http://semanticwebindia.in/GVA/res/Cat19">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <hasCategory rdf:resource="http://semanticwebindia.in/GVA/res/Cat98"/>
+        <skos:broader rdf:resource="http://semanticwebindia.in/GVA/res/Cat1"/>
+        <skos:altLabel>ExAC_ALL</skos:altLabel>
+        <skos:definition>show</skos:definition>
+        <skos:note>S</skos:note>
+        <skos:prefLabel>ExAC_ALL</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/res/Cat2 -->
+
+    <owl:NamedIndividual rdf:about="http://semanticwebindia.in/GVA/res/Cat2">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <hasCategory rdf:resource="http://semanticwebindia.in/GVA/res/Cat94"/>
+        <skos:broader rdf:resource="http://semanticwebindia.in/GVA/res/Cat1"/>
+        <skos:altLabel>Chr</skos:altLabel>
+        <skos:definition>show</skos:definition>
+        <skos:note>S</skos:note>
+        <skos:prefLabel>Chr</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/res/Cat20 -->
+
+    <owl:NamedIndividual rdf:about="http://semanticwebindia.in/GVA/res/Cat20">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <hasCategory rdf:resource="http://semanticwebindia.in/GVA/res/Cat98"/>
+        <skos:broader rdf:resource="http://semanticwebindia.in/GVA/res/Cat1"/>
+        <skos:altLabel>gnomAD_exome_ALL</skos:altLabel>
+        <skos:note>N</skos:note>
+        <skos:prefLabel>gnomAD_exome_ALL</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/res/Cat21 -->
+
+    <owl:NamedIndividual rdf:about="http://semanticwebindia.in/GVA/res/Cat21">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <hasCategory rdf:resource="http://semanticwebindia.in/GVA/res/Cat98"/>
+        <skos:broader rdf:resource="http://semanticwebindia.in/GVA/res/Cat1"/>
+        <skos:altLabel>gnomAD_genome_ALL</skos:altLabel>
+        <skos:note>N</skos:note>
+        <skos:prefLabel>gnomAD_genome_ALL</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/res/Cat22 -->
+
+    <owl:NamedIndividual rdf:about="http://semanticwebindia.in/GVA/res/Cat22">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <hasCategory rdf:resource="http://semanticwebindia.in/GVA/res/Cat98"/>
+        <skos:broader rdf:resource="http://semanticwebindia.in/GVA/res/Cat1"/>
+        <skos:altLabel>cg69</skos:altLabel>
+        <skos:definition>show</skos:definition>
+        <skos:note>S</skos:note>
+        <skos:prefLabel>cg69</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/res/Cat23 -->
+
+    <owl:NamedIndividual rdf:about="http://semanticwebindia.in/GVA/res/Cat23">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <hasCategory rdf:resource="http://semanticwebindia.in/GVA/res/Cat98"/>
+        <skos:broader rdf:resource="http://semanticwebindia.in/GVA/res/Cat1"/>
+        <skos:altLabel>cosmic70</skos:altLabel>
+        <skos:note>N</skos:note>
+        <skos:prefLabel>cosmic70</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/res/Cat24 -->
+
+    <owl:NamedIndividual rdf:about="http://semanticwebindia.in/GVA/res/Cat24">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <hasCategory rdf:resource="http://semanticwebindia.in/GVA/res/Cat98"/>
+        <skos:broader rdf:resource="http://semanticwebindia.in/GVA/res/Cat1"/>
+        <skos:altLabel>nci60</skos:altLabel>
+        <skos:note>N</skos:note>
+        <skos:prefLabel>nci60</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/res/Cat25 -->
+
+    <owl:NamedIndividual rdf:about="http://semanticwebindia.in/GVA/res/Cat25">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <hasCategory rdf:resource="http://semanticwebindia.in/GVA/res/Cat98"/>
+        <skos:broader rdf:resource="http://semanticwebindia.in/GVA/res/Cat1"/>
+        <skos:altLabel>ICGC_Id</skos:altLabel>
+        <skos:note>N</skos:note>
+        <skos:prefLabel>ICGC_Id</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/res/Cat26 -->
+
+    <owl:NamedIndividual rdf:about="http://semanticwebindia.in/GVA/res/Cat26">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <hasCategory rdf:resource="http://semanticwebindia.in/GVA/res/Cat98"/>
+        <skos:broader rdf:resource="http://semanticwebindia.in/GVA/res/Cat1"/>
+        <skos:altLabel>ICGC_Occurrence</skos:altLabel>
+        <skos:note>N</skos:note>
+        <skos:prefLabel>ICGC_Occurrence</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/res/Cat27 -->
+
+    <owl:NamedIndividual rdf:about="http://semanticwebindia.in/GVA/res/Cat27">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <hasCategory rdf:resource="http://semanticwebindia.in/GVA/res/Cat98"/>
+        <skos:broader rdf:resource="http://semanticwebindia.in/GVA/res/Cat1"/>
+        <skos:altLabel>GIV_CDFD_AAF</skos:altLabel>
+        <skos:definition>show</skos:definition>
+        <skos:note>S</skos:note>
+        <skos:prefLabel>GIV_CDFD_AAF</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/res/Cat28 -->
+
+    <owl:NamedIndividual rdf:about="http://semanticwebindia.in/GVA/res/Cat28">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <hasCategory rdf:resource="http://semanticwebindia.in/GVA/res/Cat98"/>
+        <skos:broader rdf:resource="http://semanticwebindia.in/GVA/res/Cat1"/>
+        <skos:altLabel>GIV_CDFD_HET</skos:altLabel>
+        <skos:note>N</skos:note>
+        <skos:prefLabel>GIV_CDFD_HET</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/res/Cat29 -->
+
+    <owl:NamedIndividual rdf:about="http://semanticwebindia.in/GVA/res/Cat29">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <hasCategory rdf:resource="http://semanticwebindia.in/GVA/res/Cat98"/>
+        <skos:broader rdf:resource="http://semanticwebindia.in/GVA/res/Cat1"/>
+        <skos:altLabel>GIV_CDFD_HOM-VAR</skos:altLabel>
+        <skos:note>N</skos:note>
+        <skos:prefLabel>GIV_CDFD_HOM-VAR</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/res/Cat3 -->
+
+    <owl:NamedIndividual rdf:about="http://semanticwebindia.in/GVA/res/Cat3">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <hasCategory rdf:resource="http://semanticwebindia.in/GVA/res/Cat94"/>
+        <skos:broader rdf:resource="http://semanticwebindia.in/GVA/res/Cat1"/>
+        <skos:altLabel>Start</skos:altLabel>
+        <skos:definition>show</skos:definition>
+        <skos:note>N</skos:note>
+        <skos:prefLabel>Start</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/res/Cat30 -->
+
+    <owl:NamedIndividual rdf:about="http://semanticwebindia.in/GVA/res/Cat30">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <hasCategory rdf:resource="http://semanticwebindia.in/GVA/res/Cat98"/>
+        <skos:broader rdf:resource="http://semanticwebindia.in/GVA/res/Cat1"/>
+        <skos:altLabel>GIV_Indian_AAF</skos:altLabel>
+        <skos:note>N</skos:note>
+        <skos:prefLabel>GIV_Indian_AAF</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/res/Cat31 -->
+
+    <owl:NamedIndividual rdf:about="http://semanticwebindia.in/GVA/res/Cat31">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <hasCategory rdf:resource="http://semanticwebindia.in/GVA/res/Cat98"/>
+        <skos:broader rdf:resource="http://semanticwebindia.in/GVA/res/Cat1"/>
+        <skos:altLabel>GIV_Indian_HET</skos:altLabel>
+        <skos:note>N</skos:note>
+        <skos:prefLabel>GIV_Indian_HET</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/res/Cat32 -->
+
+    <owl:NamedIndividual rdf:about="http://semanticwebindia.in/GVA/res/Cat32">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <hasCategory rdf:resource="http://semanticwebindia.in/GVA/res/Cat98"/>
+        <skos:broader rdf:resource="http://semanticwebindia.in/GVA/res/Cat1"/>
+        <skos:altLabel>GIV_Indian_HOM-VAR</skos:altLabel>
+        <skos:note>N</skos:note>
+        <skos:prefLabel>GIV_Indian_HOM-VAR</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/res/Cat33 -->
+
+    <owl:NamedIndividual rdf:about="http://semanticwebindia.in/GVA/res/Cat33">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <hasCategory rdf:resource="http://semanticwebindia.in/GVA/res/Cat99"/>
+        <skos:broader rdf:resource="http://semanticwebindia.in/GVA/res/Cat1"/>
+        <skos:altLabel>snp138NonFlagged</skos:altLabel>
+        <skos:note>N</skos:note>
+        <skos:prefLabel>snp138NonFlagged</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/res/Cat34 -->
+
+    <owl:NamedIndividual rdf:about="http://semanticwebindia.in/GVA/res/Cat34">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <hasCategory rdf:resource="http://semanticwebindia.in/GVA/res/Cat99"/>
+        <skos:broader rdf:resource="http://semanticwebindia.in/GVA/res/Cat1"/>
+        <skos:altLabel>avsnp138</skos:altLabel>
+        <skos:note>N</skos:note>
+        <skos:prefLabel>avsnp138</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/res/Cat35 -->
+
+    <owl:NamedIndividual rdf:about="http://semanticwebindia.in/GVA/res/Cat35">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <hasCategory rdf:resource="http://semanticwebindia.in/GVA/res/Cat99"/>
+        <skos:broader rdf:resource="http://semanticwebindia.in/GVA/res/Cat1"/>
+        <skos:altLabel>avsnp150</skos:altLabel>
+        <skos:note>N</skos:note>
+        <skos:prefLabel>avsnp150</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/res/Cat36 -->
+
+    <owl:NamedIndividual rdf:about="http://semanticwebindia.in/GVA/res/Cat36">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <hasCategory rdf:resource="http://semanticwebindia.in/GVA/res/Cat100"/>
+        <skos:broader rdf:resource="http://semanticwebindia.in/GVA/res/Cat1"/>
+        <skos:altLabel>CLNALLELEID</skos:altLabel>
+        <skos:note>N</skos:note>
+        <skos:prefLabel>CLNALLELEID</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/res/Cat37 -->
+
+    <owl:NamedIndividual rdf:about="http://semanticwebindia.in/GVA/res/Cat37">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <hasCategory rdf:resource="http://semanticwebindia.in/GVA/res/Cat100"/>
+        <skos:broader rdf:resource="http://semanticwebindia.in/GVA/res/Cat1"/>
+        <skos:altLabel>CLNDN</skos:altLabel>
+        <skos:note>N</skos:note>
+        <skos:prefLabel>CLNDN</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/res/Cat38 -->
+
+    <owl:NamedIndividual rdf:about="http://semanticwebindia.in/GVA/res/Cat38">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <hasCategory rdf:resource="http://semanticwebindia.in/GVA/res/Cat100"/>
+        <skos:broader rdf:resource="http://semanticwebindia.in/GVA/res/Cat1"/>
+        <skos:altLabel>CLNDISDB</skos:altLabel>
+        <skos:note>N</skos:note>
+        <skos:prefLabel>CLNDISDB</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/res/Cat39 -->
+
+    <owl:NamedIndividual rdf:about="http://semanticwebindia.in/GVA/res/Cat39">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <hasCategory rdf:resource="http://semanticwebindia.in/GVA/res/Cat100"/>
+        <skos:broader rdf:resource="http://semanticwebindia.in/GVA/res/Cat1"/>
+        <skos:altLabel>CLNREVSTAT</skos:altLabel>
+        <skos:note>\N</skos:note>
+        <skos:prefLabel>CLNREVSTAT</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/res/Cat4 -->
+
+    <owl:NamedIndividual rdf:about="http://semanticwebindia.in/GVA/res/Cat4">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <hasCategory rdf:resource="http://semanticwebindia.in/GVA/res/Cat94"/>
+        <skos:broader rdf:resource="http://semanticwebindia.in/GVA/res/Cat1"/>
+        <skos:altLabel>End</skos:altLabel>
+        <skos:definition>show</skos:definition>
+        <skos:note>N</skos:note>
+        <skos:prefLabel>End</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/res/Cat40 -->
+
+    <owl:NamedIndividual rdf:about="http://semanticwebindia.in/GVA/res/Cat40">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <hasCategory rdf:resource="http://semanticwebindia.in/GVA/res/Cat100"/>
+        <skos:broader rdf:resource="http://semanticwebindia.in/GVA/res/Cat1"/>
+        <skos:altLabel>CLNSIG</skos:altLabel>
+        <skos:definition>show</skos:definition>
+        <skos:note>S</skos:note>
+        <skos:prefLabel>CLNSIG</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/res/Cat41 -->
+
+    <owl:NamedIndividual rdf:about="http://semanticwebindia.in/GVA/res/Cat41">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <hasCategory rdf:resource="http://semanticwebindia.in/GVA/res/Cat101"/>
+        <skos:broader rdf:resource="http://semanticwebindia.in/GVA/res/Cat1"/>
+        <skos:altLabel>SIFT_score</skos:altLabel>
+        <skos:note>N</skos:note>
+        <skos:prefLabel>SIFT_score</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/res/Cat42 -->
+
+    <owl:NamedIndividual rdf:about="http://semanticwebindia.in/GVA/res/Cat42">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <hasCategory rdf:resource="http://semanticwebindia.in/GVA/res/Cat101"/>
+        <skos:broader rdf:resource="http://semanticwebindia.in/GVA/res/Cat1"/>
+        <skos:altLabel>SIFT_pred</skos:altLabel>
+        <skos:definition>show</skos:definition>
+        <skos:note>S</skos:note>
+        <skos:prefLabel>SIFT_pred</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/res/Cat43 -->
+
+    <owl:NamedIndividual rdf:about="http://semanticwebindia.in/GVA/res/Cat43">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <hasCategory rdf:resource="http://semanticwebindia.in/GVA/res/Cat101"/>
+        <skos:broader rdf:resource="http://semanticwebindia.in/GVA/res/Cat1"/>
+        <skos:altLabel>Polyphen2_HDIV_score</skos:altLabel>
+        <skos:note>N</skos:note>
+        <skos:prefLabel>Polyphen2_HDIV_score</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/res/Cat44 -->
+
+    <owl:NamedIndividual rdf:about="http://semanticwebindia.in/GVA/res/Cat44">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <hasCategory rdf:resource="http://semanticwebindia.in/GVA/res/Cat101"/>
+        <skos:broader rdf:resource="http://semanticwebindia.in/GVA/res/Cat1"/>
+        <skos:altLabel>Polyphen2_HDIV_pred</skos:altLabel>
+        <skos:definition>show</skos:definition>
+        <skos:note>S</skos:note>
+        <skos:prefLabel>Polyphen2_HDIV_pred</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/res/Cat45 -->
+
+    <owl:NamedIndividual rdf:about="http://semanticwebindia.in/GVA/res/Cat45">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <hasCategory rdf:resource="http://semanticwebindia.in/GVA/res/Cat101"/>
+        <skos:broader rdf:resource="http://semanticwebindia.in/GVA/res/Cat1"/>
+        <skos:altLabel>Polyphen2_HVAR_score</skos:altLabel>
+        <skos:note>N</skos:note>
+        <skos:prefLabel>Polyphen2_HVAR_score</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/res/Cat46 -->
+
+    <owl:NamedIndividual rdf:about="http://semanticwebindia.in/GVA/res/Cat46">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <hasCategory rdf:resource="http://semanticwebindia.in/GVA/res/Cat101"/>
+        <skos:broader rdf:resource="http://semanticwebindia.in/GVA/res/Cat1"/>
+        <skos:altLabel>Polyphen2_HVAR_pred</skos:altLabel>
+        <skos:definition>show</skos:definition>
+        <skos:note>S</skos:note>
+        <skos:prefLabel>Polyphen2_HVAR_pred</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/res/Cat47 -->
+
+    <owl:NamedIndividual rdf:about="http://semanticwebindia.in/GVA/res/Cat47">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <hasCategory rdf:resource="http://semanticwebindia.in/GVA/res/Cat101"/>
+        <skos:broader rdf:resource="http://semanticwebindia.in/GVA/res/Cat1"/>
+        <skos:altLabel>MutationTaster_score</skos:altLabel>
+        <skos:note>N</skos:note>
+        <skos:prefLabel>MutationTaster_score</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/res/Cat48 -->
+
+    <owl:NamedIndividual rdf:about="http://semanticwebindia.in/GVA/res/Cat48">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <hasCategory rdf:resource="http://semanticwebindia.in/GVA/res/Cat101"/>
+        <skos:broader rdf:resource="http://semanticwebindia.in/GVA/res/Cat1"/>
+        <skos:altLabel>MutationTaster_pred</skos:altLabel>
+        <skos:note>N</skos:note>
+        <skos:prefLabel>MutationTaster_pred</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/res/Cat49 -->
+
+    <owl:NamedIndividual rdf:about="http://semanticwebindia.in/GVA/res/Cat49">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <hasCategory rdf:resource="http://semanticwebindia.in/GVA/res/Cat106"/>
+        <skos:broader rdf:resource="http://semanticwebindia.in/GVA/res/Cat1"/>
+        <skos:altLabel>CADD</skos:altLabel>
+        <skos:note>N</skos:note>
+        <skos:prefLabel>CADD</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/res/Cat5 -->
+
+    <owl:NamedIndividual rdf:about="http://semanticwebindia.in/GVA/res/Cat5">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <hasCategory rdf:resource="http://semanticwebindia.in/GVA/res/Cat95"/>
+        <skos:broader rdf:resource="http://semanticwebindia.in/GVA/res/Cat1"/>
+        <skos:altLabel>Ref</skos:altLabel>
+        <skos:definition>show</skos:definition>
+        <skos:note>S</skos:note>
+        <skos:prefLabel>Ref</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/res/Cat50 -->
+
+    <owl:NamedIndividual rdf:about="http://semanticwebindia.in/GVA/res/Cat50">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <hasCategory rdf:resource="http://semanticwebindia.in/GVA/res/Cat106"/>
+        <skos:broader rdf:resource="http://semanticwebindia.in/GVA/res/Cat1"/>
+        <skos:altLabel>CADD_Phred</skos:altLabel>
+        <skos:definition>show</skos:definition>
+        <skos:note>S</skos:note>
+        <skos:prefLabel>CADD_Phred</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/res/Cat51 -->
+
+    <owl:NamedIndividual rdf:about="http://semanticwebindia.in/GVA/res/Cat51">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <hasCategory rdf:resource="http://semanticwebindia.in/GVA/res/Cat106"/>
+        <skos:broader rdf:resource="http://semanticwebindia.in/GVA/res/Cat1"/>
+        <skos:altLabel>CADD13_RawScore</skos:altLabel>
+        <skos:note>N</skos:note>
+        <skos:prefLabel>CADD13_RawScore</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/res/Cat52 -->
+
+    <owl:NamedIndividual rdf:about="http://semanticwebindia.in/GVA/res/Cat52">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <hasCategory rdf:resource="http://semanticwebindia.in/GVA/res/Cat106"/>
+        <skos:broader rdf:resource="http://semanticwebindia.in/GVA/res/Cat1"/>
+        <skos:altLabel>CADD13_PHRED</skos:altLabel>
+        <skos:note>N</skos:note>
+        <skos:prefLabel>CADD13_PHRED</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/res/Cat53 -->
+
+    <owl:NamedIndividual rdf:about="http://semanticwebindia.in/GVA/res/Cat53">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <hasCategory rdf:resource="http://semanticwebindia.in/GVA/res/Cat101"/>
+        <skos:broader rdf:resource="http://semanticwebindia.in/GVA/res/Cat1"/>
+        <skos:altLabel>MCAP13</skos:altLabel>
+        <skos:note>N</skos:note>
+        <skos:prefLabel>MCAP13</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/res/Cat54 -->
+
+    <owl:NamedIndividual rdf:about="http://semanticwebindia.in/GVA/res/Cat54">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <hasCategory rdf:resource="http://semanticwebindia.in/GVA/res/Cat102"/>
+        <skos:broader rdf:resource="http://semanticwebindia.in/GVA/res/Cat1"/>
+        <skos:altLabel>Interpro_domain</skos:altLabel>
+        <skos:note>N</skos:note>
+        <skos:prefLabel>Interpro_domain</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/res/Cat55 -->
+
+    <owl:NamedIndividual rdf:about="http://semanticwebindia.in/GVA/res/Cat55">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <hasCategory rdf:resource="http://semanticwebindia.in/GVA/res/Cat103"/>
+        <skos:broader rdf:resource="http://semanticwebindia.in/GVA/res/Cat1"/>
+        <skos:altLabel>InterVar_automated</skos:altLabel>
+        <skos:definition>show</skos:definition>
+        <skos:note>S</skos:note>
+        <skos:prefLabel>InterVar_automated</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/res/Cat56 -->
+
+    <owl:NamedIndividual rdf:about="http://semanticwebindia.in/GVA/res/Cat56">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <hasCategory rdf:resource="http://semanticwebindia.in/GVA/res/Cat103"/>
+        <skos:broader rdf:resource="http://semanticwebindia.in/GVA/res/Cat1"/>
+        <skos:altLabel>PVS1</skos:altLabel>
+        <skos:note>N</skos:note>
+        <skos:prefLabel>PVS1</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/res/Cat57 -->
+
+    <owl:NamedIndividual rdf:about="http://semanticwebindia.in/GVA/res/Cat57">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <hasCategory rdf:resource="http://semanticwebindia.in/GVA/res/Cat103"/>
+        <skos:broader rdf:resource="http://semanticwebindia.in/GVA/res/Cat1"/>
+        <skos:altLabel>PS1</skos:altLabel>
+        <skos:note>N</skos:note>
+        <skos:prefLabel>PS1</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/res/Cat58 -->
+
+    <owl:NamedIndividual rdf:about="http://semanticwebindia.in/GVA/res/Cat58">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <hasCategory rdf:resource="http://semanticwebindia.in/GVA/res/Cat103"/>
+        <skos:broader rdf:resource="http://semanticwebindia.in/GVA/res/Cat1"/>
+        <skos:altLabel>PS2</skos:altLabel>
+        <skos:note>N</skos:note>
+        <skos:prefLabel>PS2</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/res/Cat59 -->
+
+    <owl:NamedIndividual rdf:about="http://semanticwebindia.in/GVA/res/Cat59">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <hasCategory rdf:resource="http://semanticwebindia.in/GVA/res/Cat103"/>
+        <skos:broader rdf:resource="http://semanticwebindia.in/GVA/res/Cat1"/>
+        <skos:altLabel>PS3</skos:altLabel>
+        <skos:note>N</skos:note>
+        <skos:prefLabel>PS3</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/res/Cat6 -->
+
+    <owl:NamedIndividual rdf:about="http://semanticwebindia.in/GVA/res/Cat6">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <hasCategory rdf:resource="http://semanticwebindia.in/GVA/res/Cat95"/>
+        <skos:broader rdf:resource="http://semanticwebindia.in/GVA/res/Cat1"/>
+        <skos:altLabel>Alt</skos:altLabel>
+        <skos:definition>show</skos:definition>
+        <skos:note>S</skos:note>
+        <skos:prefLabel>Alt</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/res/Cat60 -->
+
+    <owl:NamedIndividual rdf:about="http://semanticwebindia.in/GVA/res/Cat60">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <hasCategory rdf:resource="http://semanticwebindia.in/GVA/res/Cat103"/>
+        <skos:broader rdf:resource="http://semanticwebindia.in/GVA/res/Cat1"/>
+        <skos:altLabel>PS4</skos:altLabel>
+        <skos:note>N</skos:note>
+        <skos:prefLabel>PS4</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/res/Cat61 -->
+
+    <owl:NamedIndividual rdf:about="http://semanticwebindia.in/GVA/res/Cat61">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <hasCategory rdf:resource="http://semanticwebindia.in/GVA/res/Cat103"/>
+        <skos:broader rdf:resource="http://semanticwebindia.in/GVA/res/Cat1"/>
+        <skos:altLabel>PM1</skos:altLabel>
+        <skos:note>N</skos:note>
+        <skos:prefLabel>PM1</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/res/Cat62 -->
+
+    <owl:NamedIndividual rdf:about="http://semanticwebindia.in/GVA/res/Cat62">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <hasCategory rdf:resource="http://semanticwebindia.in/GVA/res/Cat103"/>
+        <skos:broader rdf:resource="http://semanticwebindia.in/GVA/res/Cat1"/>
+        <skos:altLabel>PM2</skos:altLabel>
+        <skos:note>N</skos:note>
+        <skos:prefLabel>PM2</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/res/Cat63 -->
+
+    <owl:NamedIndividual rdf:about="http://semanticwebindia.in/GVA/res/Cat63">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <hasCategory rdf:resource="http://semanticwebindia.in/GVA/res/Cat103"/>
+        <skos:broader rdf:resource="http://semanticwebindia.in/GVA/res/Cat1"/>
+        <skos:altLabel>PM3</skos:altLabel>
+        <skos:note>N</skos:note>
+        <skos:prefLabel>PM3</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/res/Cat64 -->
+
+    <owl:NamedIndividual rdf:about="http://semanticwebindia.in/GVA/res/Cat64">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <hasCategory rdf:resource="http://semanticwebindia.in/GVA/res/Cat103"/>
+        <skos:broader rdf:resource="http://semanticwebindia.in/GVA/res/Cat1"/>
+        <skos:altLabel>PM4</skos:altLabel>
+        <skos:note>N</skos:note>
+        <skos:prefLabel>PM4</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/res/Cat65 -->
+
+    <owl:NamedIndividual rdf:about="http://semanticwebindia.in/GVA/res/Cat65">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <hasCategory rdf:resource="http://semanticwebindia.in/GVA/res/Cat103"/>
+        <skos:broader rdf:resource="http://semanticwebindia.in/GVA/res/Cat1"/>
+        <skos:altLabel>PM5</skos:altLabel>
+        <skos:note>N</skos:note>
+        <skos:prefLabel>PM5</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/res/Cat66 -->
+
+    <owl:NamedIndividual rdf:about="http://semanticwebindia.in/GVA/res/Cat66">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <hasCategory rdf:resource="http://semanticwebindia.in/GVA/res/Cat103"/>
+        <skos:broader rdf:resource="http://semanticwebindia.in/GVA/res/Cat1"/>
+        <skos:altLabel>PM6</skos:altLabel>
+        <skos:note>N</skos:note>
+        <skos:prefLabel>PM6</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/res/Cat67 -->
+
+    <owl:NamedIndividual rdf:about="http://semanticwebindia.in/GVA/res/Cat67">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <hasCategory rdf:resource="http://semanticwebindia.in/GVA/res/Cat103"/>
+        <skos:broader rdf:resource="http://semanticwebindia.in/GVA/res/Cat1"/>
+        <skos:altLabel>PP1</skos:altLabel>
+        <skos:note>N</skos:note>
+        <skos:prefLabel>PP1</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/res/Cat68 -->
+
+    <owl:NamedIndividual rdf:about="http://semanticwebindia.in/GVA/res/Cat68">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <hasCategory rdf:resource="http://semanticwebindia.in/GVA/res/Cat103"/>
+        <skos:broader rdf:resource="http://semanticwebindia.in/GVA/res/Cat1"/>
+        <skos:altLabel>PP2</skos:altLabel>
+        <skos:note>N</skos:note>
+        <skos:prefLabel>PP2</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/res/Cat69 -->
+
+    <owl:NamedIndividual rdf:about="http://semanticwebindia.in/GVA/res/Cat69">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <hasCategory rdf:resource="http://semanticwebindia.in/GVA/res/Cat103"/>
+        <skos:broader rdf:resource="http://semanticwebindia.in/GVA/res/Cat1"/>
+        <skos:altLabel>PP3</skos:altLabel>
+        <skos:note>N</skos:note>
+        <skos:prefLabel>PP3</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/res/Cat7 -->
+
+    <owl:NamedIndividual rdf:about="http://semanticwebindia.in/GVA/res/Cat7">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <hasCategory rdf:resource="http://semanticwebindia.in/GVA/res/Cat96"/>
+        <skos:broader rdf:resource="http://semanticwebindia.in/GVA/res/Cat1"/>
+        <skos:altLabel>Func.refGene</skos:altLabel>
+        <skos:definition>show</skos:definition>
+        <skos:note>S</skos:note>
+        <skos:prefLabel>Func.refGene</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/res/Cat70 -->
+
+    <owl:NamedIndividual rdf:about="http://semanticwebindia.in/GVA/res/Cat70">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <hasCategory rdf:resource="http://semanticwebindia.in/GVA/res/Cat103"/>
+        <skos:broader rdf:resource="http://semanticwebindia.in/GVA/res/Cat1"/>
+        <skos:altLabel>PP4</skos:altLabel>
+        <skos:note>N</skos:note>
+        <skos:prefLabel>PP4</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/res/Cat71 -->
+
+    <owl:NamedIndividual rdf:about="http://semanticwebindia.in/GVA/res/Cat71">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <hasCategory rdf:resource="http://semanticwebindia.in/GVA/res/Cat103"/>
+        <skos:broader rdf:resource="http://semanticwebindia.in/GVA/res/Cat1"/>
+        <skos:altLabel>PP5</skos:altLabel>
+        <skos:note>N</skos:note>
+        <skos:prefLabel>PP5</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/res/Cat72 -->
+
+    <owl:NamedIndividual rdf:about="http://semanticwebindia.in/GVA/res/Cat72">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <hasCategory rdf:resource="http://semanticwebindia.in/GVA/res/Cat103"/>
+        <skos:broader rdf:resource="http://semanticwebindia.in/GVA/res/Cat1"/>
+        <skos:altLabel>BA1</skos:altLabel>
+        <skos:note>N</skos:note>
+        <skos:prefLabel>BA1</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/res/Cat73 -->
+
+    <owl:NamedIndividual rdf:about="http://semanticwebindia.in/GVA/res/Cat73">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <hasCategory rdf:resource="http://semanticwebindia.in/GVA/res/Cat103"/>
+        <skos:broader rdf:resource="http://semanticwebindia.in/GVA/res/Cat1"/>
+        <skos:altLabel>BS1</skos:altLabel>
+        <skos:note>N</skos:note>
+        <skos:prefLabel>BS1</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/res/Cat74 -->
+
+    <owl:NamedIndividual rdf:about="http://semanticwebindia.in/GVA/res/Cat74">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <hasCategory rdf:resource="http://semanticwebindia.in/GVA/res/Cat103"/>
+        <skos:broader rdf:resource="http://semanticwebindia.in/GVA/res/Cat1"/>
+        <skos:altLabel>BS2</skos:altLabel>
+        <skos:note>N</skos:note>
+        <skos:prefLabel>BS2</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/res/Cat75 -->
+
+    <owl:NamedIndividual rdf:about="http://semanticwebindia.in/GVA/res/Cat75">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <hasCategory rdf:resource="http://semanticwebindia.in/GVA/res/Cat103"/>
+        <skos:broader rdf:resource="http://semanticwebindia.in/GVA/res/Cat1"/>
+        <skos:altLabel>BS3</skos:altLabel>
+        <skos:note>N</skos:note>
+        <skos:prefLabel>BS3</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/res/Cat76 -->
+
+    <owl:NamedIndividual rdf:about="http://semanticwebindia.in/GVA/res/Cat76">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <hasCategory rdf:resource="http://semanticwebindia.in/GVA/res/Cat103"/>
+        <skos:broader rdf:resource="http://semanticwebindia.in/GVA/res/Cat1"/>
+        <skos:altLabel>BS4</skos:altLabel>
+        <skos:note>N</skos:note>
+        <skos:prefLabel>BS4</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/res/Cat77 -->
+
+    <owl:NamedIndividual rdf:about="http://semanticwebindia.in/GVA/res/Cat77">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <hasCategory rdf:resource="http://semanticwebindia.in/GVA/res/Cat103"/>
+        <skos:broader rdf:resource="http://semanticwebindia.in/GVA/res/Cat1"/>
+        <skos:altLabel>BP1</skos:altLabel>
+        <skos:note>N</skos:note>
+        <skos:prefLabel>BP1</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/res/Cat78 -->
+
+    <owl:NamedIndividual rdf:about="http://semanticwebindia.in/GVA/res/Cat78">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <hasCategory rdf:resource="http://semanticwebindia.in/GVA/res/Cat103"/>
+        <skos:broader rdf:resource="http://semanticwebindia.in/GVA/res/Cat1"/>
+        <skos:altLabel>BP2</skos:altLabel>
+        <skos:note>N</skos:note>
+        <skos:prefLabel>BP2</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/res/Cat79 -->
+
+    <owl:NamedIndividual rdf:about="http://semanticwebindia.in/GVA/res/Cat79">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <hasCategory rdf:resource="http://semanticwebindia.in/GVA/res/Cat103"/>
+        <skos:broader rdf:resource="http://semanticwebindia.in/GVA/res/Cat1"/>
+        <skos:altLabel>BP3</skos:altLabel>
+        <skos:note>N</skos:note>
+        <skos:prefLabel>BP3</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/res/Cat8 -->
+
+    <owl:NamedIndividual rdf:about="http://semanticwebindia.in/GVA/res/Cat8">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <hasCategory rdf:resource="http://semanticwebindia.in/GVA/res/Cat96"/>
+        <skos:broader rdf:resource="http://semanticwebindia.in/GVA/res/Cat1"/>
+        <skos:altLabel>Gene.refGene</skos:altLabel>
+        <skos:definition>show</skos:definition>
+        <skos:note>S</skos:note>
+        <skos:prefLabel>Gene.refGene</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/res/Cat80 -->
+
+    <owl:NamedIndividual rdf:about="http://semanticwebindia.in/GVA/res/Cat80">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <hasCategory rdf:resource="http://semanticwebindia.in/GVA/res/Cat103"/>
+        <skos:broader rdf:resource="http://semanticwebindia.in/GVA/res/Cat1"/>
+        <skos:altLabel>BP4</skos:altLabel>
+        <skos:note>N</skos:note>
+        <skos:prefLabel>BP4</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/res/Cat81 -->
+
+    <owl:NamedIndividual rdf:about="http://semanticwebindia.in/GVA/res/Cat81">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <hasCategory rdf:resource="http://semanticwebindia.in/GVA/res/Cat103"/>
+        <skos:broader rdf:resource="http://semanticwebindia.in/GVA/res/Cat1"/>
+        <skos:altLabel>BP5</skos:altLabel>
+        <skos:note>N</skos:note>
+        <skos:prefLabel>BP5</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/res/Cat82 -->
+
+    <owl:NamedIndividual rdf:about="http://semanticwebindia.in/GVA/res/Cat82">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <hasCategory rdf:resource="http://semanticwebindia.in/GVA/res/Cat103"/>
+        <skos:broader rdf:resource="http://semanticwebindia.in/GVA/res/Cat1"/>
+        <skos:altLabel>BP6</skos:altLabel>
+        <skos:note>N</skos:note>
+        <skos:prefLabel>BP6</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/res/Cat83 -->
+
+    <owl:NamedIndividual rdf:about="http://semanticwebindia.in/GVA/res/Cat83">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <hasCategory rdf:resource="http://semanticwebindia.in/GVA/res/Cat103"/>
+        <skos:broader rdf:resource="http://semanticwebindia.in/GVA/res/Cat1"/>
+        <skos:altLabel>BP7</skos:altLabel>
+        <skos:note>N</skos:note>
+        <skos:prefLabel>BP7</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/res/Cat84 -->
+
+    <owl:NamedIndividual rdf:about="http://semanticwebindia.in/GVA/res/Cat84">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <hasCategory rdf:resource="http://semanticwebindia.in/GVA/res/Cat96"/>
+        <skos:broader rdf:resource="http://semanticwebindia.in/GVA/res/Cat1"/>
+        <skos:altLabel>Zygosity</skos:altLabel>
+        <skos:definition>show</skos:definition>
+        <skos:note>S</skos:note>
+        <skos:prefLabel>Zygosity</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/res/Cat85 -->
+
+    <owl:NamedIndividual rdf:about="http://semanticwebindia.in/GVA/res/Cat85">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <hasCategory rdf:resource="http://semanticwebindia.in/GVA/res/Cat96"/>
+        <skos:broader rdf:resource="http://semanticwebindia.in/GVA/res/Cat1"/>
+        <skos:altLabel>Total_DP</skos:altLabel>
+        <skos:definition>show</skos:definition>
+        <skos:note>S</skos:note>
+        <skos:prefLabel>Total_DP</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/res/Cat86 -->
+
+    <owl:NamedIndividual rdf:about="http://semanticwebindia.in/GVA/res/Cat86">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <hasCategory rdf:resource="http://semanticwebindia.in/GVA/res/Cat104"/>
+        <skos:broader rdf:resource="http://semanticwebindia.in/GVA/res/Cat1"/>
+        <skos:altLabel>Chrom</skos:altLabel>
+        <skos:note>N</skos:note>
+        <skos:prefLabel>Chrom</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/res/Cat87 -->
+
+    <owl:NamedIndividual rdf:about="http://semanticwebindia.in/GVA/res/Cat87">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <hasCategory rdf:resource="http://semanticwebindia.in/GVA/res/Cat104"/>
+        <skos:broader rdf:resource="http://semanticwebindia.in/GVA/res/Cat1"/>
+        <skos:altLabel>Chrom Start</skos:altLabel>
+        <skos:note>N</skos:note>
+        <skos:prefLabel>Start</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/res/Cat88 -->
+
+    <owl:NamedIndividual rdf:about="http://semanticwebindia.in/GVA/res/Cat88">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <hasCategory rdf:resource="http://semanticwebindia.in/GVA/res/Cat104"/>
+        <skos:broader rdf:resource="http://semanticwebindia.in/GVA/res/Cat1"/>
+        <skos:altLabel>Chrom Ref</skos:altLabel>
+        <skos:note>N</skos:note>
+        <skos:prefLabel>Ref</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/res/Cat89 -->
+
+    <owl:NamedIndividual rdf:about="http://semanticwebindia.in/GVA/res/Cat89">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <hasCategory rdf:resource="http://semanticwebindia.in/GVA/res/Cat104"/>
+        <skos:broader rdf:resource="http://semanticwebindia.in/GVA/res/Cat1"/>
+        <skos:altLabel>Chrom Alt</skos:altLabel>
+        <skos:note>N</skos:note>
+        <skos:prefLabel>Alt</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/res/Cat9 -->
+
+    <owl:NamedIndividual rdf:about="http://semanticwebindia.in/GVA/res/Cat9">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <hasCategory rdf:resource="http://semanticwebindia.in/GVA/res/Cat97"/>
+        <skos:broader rdf:resource="http://semanticwebindia.in/GVA/res/Cat1"/>
+        <skos:altLabel>OMIM_gene</skos:altLabel>
+        <skos:definition>show</skos:definition>
+        <skos:note>S</skos:note>
+        <skos:prefLabel>OMIM_gene</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/res/Cat90 -->
+
+    <owl:NamedIndividual rdf:about="http://semanticwebindia.in/GVA/res/Cat90">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <hasCategory rdf:resource="http://semanticwebindia.in/GVA/res/Cat105"/>
+        <skos:broader rdf:resource="http://semanticwebindia.in/GVA/res/Cat1"/>
+        <skos:altLabel>Qual_score</skos:altLabel>
+        <skos:definition>show</skos:definition>
+        <skos:note>N</skos:note>
+        <skos:prefLabel>Qual_score</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/res/Cat91 -->
+
+    <owl:NamedIndividual rdf:about="http://semanticwebindia.in/GVA/res/Cat91">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <hasCategory rdf:resource="http://semanticwebindia.in/GVA/res/Cat105"/>
+        <skos:broader rdf:resource="http://semanticwebindia.in/GVA/res/Cat1"/>
+        <skos:altLabel>Filter</skos:altLabel>
+        <skos:definition>show</skos:definition>
+        <skos:note>S</skos:note>
+        <skos:prefLabel>Filter</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/res/Cat92 -->
+
+    <owl:NamedIndividual rdf:about="http://semanticwebindia.in/GVA/res/Cat92">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <hasCategory rdf:resource="http://semanticwebindia.in/GVA/res/Cat105"/>
+        <skos:broader rdf:resource="http://semanticwebindia.in/GVA/res/Cat1"/>
+        <skos:altLabel>Otherinfo</skos:altLabel>
+        <skos:note>N</skos:note>
+        <skos:prefLabel>Otherinfo</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/res/Cat93 -->
+
+    <owl:NamedIndividual rdf:about="http://semanticwebindia.in/GVA/res/Cat93">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <hasCategory rdf:resource="http://semanticwebindia.in/GVA/res/Cat105"/>
+        <skos:broader rdf:resource="http://semanticwebindia.in/GVA/res/Cat1"/>
+        <skos:altLabel>GT:AD:AF:DP:F1R2:F2R1:GQ:PL:GP:PRI:SB:MB</skos:altLabel>
+        <skos:note>N</skos:note>
+        <skos:prefLabel>GT:AD:AF:DP:F1R2:F2R1:GQ:PL:GP:PRI:SB:MB</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/res/Cat94 -->
+
+    <owl:NamedIndividual rdf:about="http://semanticwebindia.in/GVA/res/Cat94">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:altLabel>Chromosome Details</skos:altLabel>
+        <skos:prefLabel>Chromosome Details</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/res/Cat95 -->
+
+    <owl:NamedIndividual rdf:about="http://semanticwebindia.in/GVA/res/Cat95">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:altLabel>Allele Details</skos:altLabel>
+        <skos:prefLabel>Allele Details</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/res/Cat96 -->
+
+    <owl:NamedIndividual rdf:about="http://semanticwebindia.in/GVA/res/Cat96">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:altLabel>Gene Variant Details</skos:altLabel>
+        <skos:prefLabel>Gene Variant Details</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/res/Cat97 -->
+
+    <owl:NamedIndividual rdf:about="http://semanticwebindia.in/GVA/res/Cat97">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:altLabel>OMIM Details</skos:altLabel>
+        <skos:prefLabel>OMIM Details</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/res/Cat98 -->
+
+    <owl:NamedIndividual rdf:about="http://semanticwebindia.in/GVA/res/Cat98">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:altLabel>Frequency of Variants</skos:altLabel>
+        <skos:prefLabel>Frequency of Variants</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanticwebindia.in/GVA/res/Cat99 -->
+
+    <owl:NamedIndividual rdf:about="http://semanticwebindia.in/GVA/res/Cat99">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:altLabel>Reference Databases</skos:altLabel>
+        <skos:prefLabel>Reference Databases</skos:prefLabel>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
